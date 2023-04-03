@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">           
+    
+      <context:annotation-config/>
+
+
+
+<context:component-scan base-package="com.wipro"></context:component-scan>
+
+
+
+	<!-- <bean id="emp" class="com.wipro.Employee">
+		<property name="eid" value="1001"></property>
+		<property name="ename" value="Geetha"></property>
+	</bean>
+
+
+	<bean id="empdao" class="com.wipro.EmployeeDAO">
+		<property name="template" ref="jdbctemplate"></property>
+	</bean>	-->
+
+	<bean id="jdbctemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="ds"></property>
+	</bean>	
+
+	<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.h2.Driver"></property>
+		<property name="url" value="jdbc:h2:~/testdb22aug"></property>
+		<property name="username" value="sa"></property>
+		<property name="password" value=""></property>
+	</bean>
+
+</beans>
+
