@@ -1,6 +1,6 @@
-==============================================
+============================================
 WELCOME TO SPRING BOOT CASE STUDY BANK PROJECT 
-==============================================
+============================================
 	
 
 This is a capstone project on bank. In this project customer bank account is created by using customer details like - name, email, address, account type, account branch city, any balance to be deposited, etc. Account number is automatically generated for every customer. Database contains no data. Database drops table after closing project, hence for each run data have to be placed. You can change database hibernate ddl-mode at here - src/main/resources/application.properties. 
